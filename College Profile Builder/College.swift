@@ -8,28 +8,27 @@
 
 import UIKit
 
-class College: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+class College: NSObject
+{
+    var name = ""
+    var location = ""
+    var numberOfStudents = 0
+    var image = UIImage(named: "default")
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    init(Name : String, Location : String, NumberOfStudents : Int, Image : UIImage)
+    {
+        super.init()
+        name = Name
+        location = Location
+        numberOfStudents = NumberOfStudents
+        image = Image
     }
-    */
 
+    init(Name:String, Location : String, NumberOfStudents : Int)
+    {
+        super.init()
+        name = Name
+        location = Location
+        numberOfStudents = NumberOfStudents
+    }
 }
